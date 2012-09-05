@@ -29,8 +29,10 @@ then
 		 pwd
 	echo '---'
 	echo 'options are: show/status/enable/disable all/pattern'
-	echo 'for example: show all, status all, enable all,'
-	echo 'show e131, enable usb, disable net, enable artnet...'
+	echo 'for example: show all, status all,'
+	echo 'show e131, disable net, enable artnet,'
+	echo 'disable all, enable ftdi, show ftdi'
+	echo 'disable dmx, enable usb, status usb...'
 	echo ''
 	echo 'special options:'
 	echo 'artnet ab:     toggle always_broadcast'
