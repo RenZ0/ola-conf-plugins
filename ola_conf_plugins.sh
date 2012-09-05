@@ -26,11 +26,15 @@ if [ $# != 2 ]
 then
 	echo '---'
 	echo 'settings path is:'
-	pwd
+		 pwd
 	echo '---'
 	echo 'options are: show/status/enable/disable all/pattern'
 	echo 'for example: show all, status all, enable all,'
 	echo 'show e131, enable usb, disable net, enable artnet...'
+	echo ''
+	echo 'special options:'
+	echo 'artnet ab:     toggle always_broadcast'
+	echo 'usbserial tri: toggle tri_use_raw_rdm'
 	echo '---'
 else
 	# if all, we set conf to match all
