@@ -28,15 +28,17 @@ then
 	echo 'settings path is:'
 		 pwd
 	echo '---'
-	echo 'options are: show/status/enable/disable all/pattern'
+	echo 'options:'
+	echo 'show/status/enable/disable all/pattern'
+	echo ''
 	echo 'for example: show all, status all,'
 	echo 'show e131, disable net, enable artnet,'
 	echo 'disable all, enable ftdi, show ftdi'
 	echo 'disable dmx, enable usb, status usb...'
 	echo ''
 	echo 'special options:'
-	echo 'artnet abc: toggle always_broadcast'
-	echo 'tri raw:    toggle tri_use_raw_rdm'
+	echo 'artnet abc (toggle always_broadcast)'
+	echo 'tri raw    (toggle tri_use_raw_rdm)'
 	echo '---'
 else
 	# if all, we set conf to match all
