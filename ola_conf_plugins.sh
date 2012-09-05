@@ -37,10 +37,20 @@ else
 		exp=$2
 	fi
 
-	# matching results
-	new_conf_list=`ls $conf_list | grep $exp`
+	# check if exists
+	a_conf_list=`for file in $conf_list
+					do
+						if [ -f $file ]
+						then
+							echo $file
+						fi
+					done`
 
-	for file in $new_conf_list
+	# matching results
+	b_conf_list=`ls $a_conf_list | grep $exp`
+
+	# for each file found
+	for file in $b_conf_list
 	do
 
 		#SHOW
