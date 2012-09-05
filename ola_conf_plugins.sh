@@ -35,8 +35,8 @@ then
 	echo 'disable dmx, enable usb, status usb...'
 	echo ''
 	echo 'special options:'
-	echo 'artnet ab:     toggle always_broadcast'
-	echo 'usbserial tri: toggle tri_use_raw_rdm'
+	echo 'artnet ab: toggle always_broadcast'
+	echo 'tri raw:   toggle tri_use_raw_rdm'
 	echo '---'
 else
 	# if all, we set conf to match all
