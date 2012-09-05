@@ -1,7 +1,11 @@
 #!/bin/bash
 # GPL-RenZO-2012
 
+# current user
 cd ~/.ola
+
+# debian olad user
+#cd /home/olad/.ola
 
 conf_list='
 ola-artnet.conf
