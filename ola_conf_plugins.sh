@@ -58,12 +58,12 @@ fi
 
 # check if exists
 a_conf_list=`for filetry in $conf_list
-				do
-					if [ -f $filetry ]
-					then
-						echo $filetry
-					fi
-				done`
+do
+	if [ -f $filetry ]
+	then
+		echo $filetry
+	fi
+done`
 
 # matching results
 b_conf_list=`ls $a_conf_list | grep $exp`
