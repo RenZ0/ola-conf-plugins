@@ -118,7 +118,7 @@ do
 			else
 				echo 'enabled = false' >> $file
 			fi
-				echo status added to $file
+				echo 'status added to' $file
 		fi
 	fi
 
@@ -141,7 +141,7 @@ then
 		echo --- $onefile ---
 		cat $onefile | grep 'always_broadcast'
 	else
-		echo $onefile missing
+		echo $onefile 'missing'
 	fi
 fi
 
@@ -162,6 +162,6 @@ then
 		echo --- $onefile ---
 		cat $onefile | grep 'tri_use_raw_rdm'
 	else
-		echo $onefile missing
+		echo $onefile 'missing'
 	fi
 fi
