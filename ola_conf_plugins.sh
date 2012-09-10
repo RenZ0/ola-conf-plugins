@@ -8,7 +8,7 @@ if [ -d $conf_path ]
 then
 	cd $conf_path
 else
-	echo 'path missing'
+	echo 'path missing:' $conf_path
 	exit 0
 fi
 
