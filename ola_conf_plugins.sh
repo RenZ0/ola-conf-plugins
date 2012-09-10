@@ -48,6 +48,10 @@ then
 	exit 0
 fi
 
+do_replace() {
+	sed "s/$1/$2/" $3 > /tmp/$3.tmp && cat /tmp/$3.tmp > $3
+}
+
 # if all, we set conf to match all
 if [ $2 = 'all' ]
 then
@@ -101,10 +105,10 @@ do
 		then
 			if [ $1 = 'enable' ]
 			then
-				sed "s/enabled = false/enabled = true/" $file > $file.tmp && mv $file.tmp $file
+				do_replace 'enabled = false' 'enabled = true' $file
 				echo activate $file
 			else
-				sed "s/enabled = true/enabled = false/" $file > $file.tmp && mv $file.tmp $file
+				do_replace 'enabled = true' 'enabled = false' $file
 				echo deactivate $file
 			fi
 		else
@@ -129,9 +133,9 @@ then
 		# if always_broadcast = false, set true and vice versa
 		if [ `cat $onefile | grep 'always_broadcast = false' | wc -l` != 0 ]
 		then
-			sed "s/always_broadcast = false/always_broadcast = true/" $onefile > $onefile.tmp && mv $onefile.tmp $onefile
+			do_replace 'always_broadcast = false' 'always_broadcast = true' $onefile
 		else
-			sed "s/always_broadcast = true/always_broadcast = false/" $onefile > $onefile.tmp && mv $onefile.tmp $onefile
+			do_replace 'always_broadcast = true' 'always_broadcast = false' $onefile
 		fi
 
 		echo --- $onefile ---
@@ -150,9 +154,9 @@ then
 		# if tri_use_raw_rdm = false, set true and vice versa
 		if [ `cat $onefile | grep 'tri_use_raw_rdm = false' | wc -l` != 0 ]
 		then
-			sed "s/tri_use_raw_rdm = false/tri_use_raw_rdm = true/" $onefile > $onefile.tmp && mv $onefile.tmp $onefile
+			do_replace 'tri_use_raw_rdm = false' 'tri_use_raw_rdm = true' $onefile
 		else
-			sed "s/tri_use_raw_rdm = true/tri_use_raw_rdm = false/" $onefile > $onefile.tmp && mv $onefile.tmp $onefile
+			do_replace 'tri_use_raw_rdm = true' 'tri_use_raw_rdm = false' $onefile
 		fi
 
 		echo --- $onefile ---
