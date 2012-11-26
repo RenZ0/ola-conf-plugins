@@ -19,6 +19,7 @@ ola-e131.conf
 ola-espnet.conf
 ola-ftdidmx.conf
 ola-opendmx.conf
+ola-osc.conf
 ola-pathport.conf
 ola-sandnet.conf
 ola-shownet.conf
