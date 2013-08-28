@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # GPL-RenZO-2012
 
 conf_path=~/.ola
@@ -12,21 +12,7 @@ else
 	exit 0
 fi
 
-conf_list='
-ola-artnet.conf
-ola-dummy.conf
-ola-e131.conf
-ola-espnet.conf
-ola-ftdidmx.conf
-ola-opendmx.conf
-ola-osc.conf
-ola-pathport.conf
-ola-sandnet.conf
-ola-shownet.conf
-ola-stageprofi.conf
-ola-usbdmx.conf
-ola-usbserial.conf
-'
+conf_list=`ls -1 | grep -v ola-port.conf | grep -v ola-universe.conf`
 
 if [ $# != 2 ]
 then
